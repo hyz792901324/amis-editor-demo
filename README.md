@@ -8,5 +8,7 @@
 
 官方的amis-editor-demo地址
 
+https://github.com/aisuda/amis-editor-demo
+
 
 ##
