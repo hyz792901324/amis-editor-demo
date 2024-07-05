@@ -11,9 +11,10 @@ module.exports = {
   webpack: {
     resolve: {
       // webpack的resolve配置
-      extensions: ['.js', '.jsx', '.ts', '.tsx','.esm.js', '.umd.js', '.min.js', '.json'], // 用于配置webpack在尝试过程中用到的后缀列表
+      extensions: ['.js', '.jsx', '.ts', '.tsx','.esm.js', '.umd.js', '.min.js', '.json','.mjs'], // 用于配置webpack在尝试过程中用到的后缀列表
       alias: {
         '@': resolve('src'),
+        'react/jsx-runtime': resolve('node_modules/react/jsx-runtime.js'),
         // $function: resolve('src/function'),
         // $utils: resolve('src/utils'),
       },
@@ -28,7 +29,8 @@ module.exports = {
     // cssLoaderUrl: true,
     // cssLoaderUrlDir: 'editor/fontawesome-free',
     moduleRules: [], // 用于配置自定义loaders
-    plugins: [], // 用于配置自定义plugins
+    plugins: [
+    ], // 用于配置自定义plugins
   },
   dev: {
     entry: { // 本地调试模式的入口
